@@ -336,7 +336,7 @@ export class Task<T> {
         kwargs: KeywordArgs;
     }): TaskHeaders {
         const base: TaskHeaders = {
-            argsrepr: JSON.stringify(args),
+            argsrepr: JSON.stringify(args).slice(0, 100),
             eta,
             expires,
             group: null,
